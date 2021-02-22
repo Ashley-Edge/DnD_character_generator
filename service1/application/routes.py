@@ -5,7 +5,7 @@
 from flask import Flask, render_template, request
 import requests
 from application import app, db
-from application.models import character
+from application.models import Character
 
 #####   Routes  #####
 

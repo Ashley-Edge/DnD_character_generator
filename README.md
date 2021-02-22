@@ -28,7 +28,7 @@ I am are required to create a service-orientated architecture for my application
 My service-orientated architecture plan
 ![service-orientated architecture diagram](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/60315b4627b35b4d8fdbc918/e69a347f558248f398c84848cc20f915/services.png)
 
-### Service1
+## Service1
 
 Service 1 basically performs a **GET** request on services 2 and 3, and a **POST** request on service 4. It talks with the other services(2, 3 & 4) to gain the data needed from a MySQL database. Service 1 then uses that information to display it to the user through my HTML/Jinja2 index.html file. Below is my mockup of how I want my end application to look like. The current generated character will be presented followed by a new character button that will essentially refresh the page. Below that the user will be able to see past generated characters. (I will be adding this function last so forgive me if I don't add it in time.)
 

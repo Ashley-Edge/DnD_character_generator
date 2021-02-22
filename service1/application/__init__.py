@@ -8,7 +8,7 @@ from os import getenv
 
 app = Flask(__name__) 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost/character_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://ashley:root@localhost/character_db'
 app.config['SECRET_KEY'] = 'ashleysecrret'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
