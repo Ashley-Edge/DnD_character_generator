@@ -15,253 +15,253 @@ def weapon():
 
     if character_race == "a Dwarf":
         if character_class == "Barbarian"
-            weapon = "axe"
+            weapon = "a battle axe"
         elif character_class == "Bard":
-            weapon = " "
+            weapon = "a light hammer"
         elif character_class == "Cleric":
-            weapon = " "
+            weapon = "a warhammer"
         elif character_class == "Druid":
-            weapon = " "
+            weapon = "a club"
         elif character_class == "Fighter":
-            weapon = " "
+            weapon = "a halberd and shield"
         elif character_class == "Monk":
-            weapon = " "
+            weapon = "their bare fists"
         elif character_class == "Paladin":
-            weapon = " "
+            weapon = "a battle axe and shield"
         elif character_class == "Ranger":
-            weapon = " "
+            weapon = "two maces"
         elif character_class == "Rogue":
-            weapon = " "
+            weapon = "a long sword and two hidden daggers"
         elif character_class == "Sorcerer":
-            weapon = " "
+            weapon = "two enchanted daggers"
         elif character_class == "Warlock":
-            weapon = " "
+            weapon = "eldrich blast"
         elif character_class == "Wizard":
-            weapon = " "
+            weapon = "bedazzling illusion spells"
 
 #####   Elf weapons   #####
 
     elif character_race == "an Elf":
         if character_class == "Barbarian"
-            weapon = ""
+            weapon = "a long sword"
         elif character_class == "Bard":
-            weapon = " "
+            weapon = "a rapier"
         elif character_class == "Cleric":
-            weapon = " "
+            weapon = "a light crossbow"
         elif character_class == "Druid":
-            weapon = " "
+            weapon = "a dagger"
         elif character_class == "Fighter":
-            weapon = " "
+            weapon = "whips"
         elif character_class == "Monk":
-            weapon = " "
+            weapon = "the mystic energy of ki"
         elif character_class == "Paladin":
-            weapon = " "
+            weapon = "a great axe and shield"
         elif character_class == "Ranger":
-            weapon = " "
+            weapon = "a longbow"
         elif character_class == "Rogue":
-            weapon = " "
+            weapon = "a hand crossbow and thieves tools"
         elif character_class == "Sorcerer":
-            weapon = " "
+            weapon = "a light crossbow"
         elif character_class == "Warlock":
-            weapon = " "
+            weapon = "their book of shadows"
         elif character_class == "Wizard":
-            weapon = " "
+            weapon = "elemental magic"
 
 #####   Halfling weapons   #####
 
     elif character_race == "a Halfling":
         if character_class == "Barbarian"
-            weapon = ""
+            weapon = "a club"
         elif character_class == "Bard":
-            weapon = " "
+            weapon = "an enchanted lute"
         elif character_class == "Cleric":
-            weapon = " "
+            weapon = "a dagger"
         elif character_class == "Druid":
-            weapon = " "
+            weapon = "a sling"
         elif character_class == "Fighter":
-            weapon = " "
+            weapon = "two short swords"
         elif character_class == "Monk":
-            weapon = " "
+            weapon = "kama"
         elif character_class == "Paladin":
-            weapon = " "
+            weapon = "a great sword and shield"
         elif character_class == "Ranger":
-            weapon = " "
+            weapon = "two daggers"
         elif character_class == "Rogue":
-            weapon = " "
+            weapon = "a rapier and a poisoner's kit"
         elif character_class == "Sorcerer":
-            weapon = " "
+            weapon = "their wild magic"
         elif character_class == "Warlock":
-            weapon = " "
+            weapon = "a spear"
         elif character_class == "Wizard":
-            weapon = " "
+            weapon = "transmutation magic"
 
 #####   Human weapons   #####
 
     elif character_race == "a Human":
         if character_class == "Barbarian"
-            weapon = ""
+            weapon = "two hand axes"
         elif character_class == "Bard":
-            weapon = " "
+            weapon = "a magical flute"
         elif character_class == "Cleric":
-            weapon = " "
+            weapon = "a mace"
         elif character_class == "Druid":
-            weapon = " "
+            weapon = "a quarter staff"
         elif character_class == "Fighter":
-            weapon = " "
+            weapon = "a great sword and shield"
         elif character_class == "Monk":
-            weapon = " "
+            weapon = "a nunchaku"
         elif character_class == "Paladin":
-            weapon = " "
+            weapon = "a warhammer and shield"
         elif character_class == "Ranger":
-            weapon = " "
+            weapon = "two light hammers"
         elif character_class == "Rogue":
-            weapon = " "
+            weapon = "two daggers and a poisoner's kit"
         elif character_class == "Sorcerer":
-            weapon = " "
+            weapon = "quarter staff"
         elif character_class == "Warlock":
-            weapon = " "
+            weapon = "their pact of the blade to materialise any melee weapon"
         elif character_class == "Wizard":
-            weapon = " "
+            weapon = "dark necromancy magic"
 
 #####   Dragonborn weapons   #####
 
     elif character_race == "a Dragonborn":
         if character_class == "Barbarian"
-            weapon = ""
+            weapon = "a glaive"
         elif character_class == "Bard":
-            weapon = " "
+            weapon = "a long sword"
         elif character_class == "Cleric":
-            weapon = " "
+            weapon = "a spear"
         elif character_class == "Druid":
-            weapon = " "
+            weapon = "darts"
         elif character_class == "Fighter":
-            weapon = " "
+            weapon = "two scimitars"
         elif character_class == "Monk":
-            weapon = " "
+            weapon = "a sling"
         elif character_class == "Paladin":
-            weapon = " "
+            weapon = "a heavy crossbow and shield"
         elif character_class == "Ranger":
-            weapon = " "
+            weapon = "a great club and dagger"
         elif character_class == "Rogue":
-            weapon = " "
+            weapon = "a short sword and two hidden daggers"
         elif character_class == "Sorcerer":
-            weapon = " "
+            weapon = "their powerful alchemist's fire"
         elif character_class == "Warlock":
-            weapon = " "
+            weapon = "their pact of chain pseudo dragon"
         elif character_class == "Wizard":
-            weapon = " "
+            weapon = "their third eye"
 
 #####   Gnome weapons   #####
 
     elif character_race == "a Gnome":
         if character_class == "Barbarian"
-            weapon = ""
+            weapon = "a war pick"
         elif character_class == "Bard":
-            weapon = " "
+            weapon = "a dagger"
         elif character_class == "Cleric":
-            weapon = " "
+            weapon = "a quarter staff"
         elif character_class == "Druid":
-            weapon = " "
+            weapon = "a sickle"
         elif character_class == "Fighter":
-            weapon = " "
+            weapon = "a light cross bow"
         elif character_class == "Monk":
-            weapon = " "
+            weapon = "a club"
         elif character_class == "Paladin":
-            weapon = " "
+            weapon = "a glaive and shield"
         elif character_class == "Ranger":
-            weapon = " "
+            weapon = "two short swords"
         elif character_class == "Rogue":
-            weapon = " "
+            weapon = "a short sword and thieves tools"
         elif character_class == "Sorcerer":
-            weapon = " "
+            weapon = "a lance"
         elif character_class == "Warlock":
-            weapon = " "
+            weapon = "their pact of the chain quasit"
         elif character_class == "Wizard":
-            weapon = " "
+            weapon = "enchantment spells"
 
 #####   Half-Elf weapons   #####
 
     elif character_race == "a Half-Elf":
         if character_class == "Barbarian"
-            weapon = ""
+            weapon = "a great sword"
         elif character_class == "Bard":
-            weapon = " "
+            weapon = "a hypnotising harp"
         elif character_class == "Cleric":
-            weapon = " "
+            weapon = "a hand axe"
         elif character_class == "Druid":
-            weapon = " "
+            weapon = "a scimitar"
         elif character_class == "Fighter":
-            weapon = " "
+            weapon = "a long bow"
         elif character_class == "Monk":
-            weapon = " "
+            weapon = "short bow"
         elif character_class == "Paladin":
-            weapon = " "
+            weapon = "two rapiers"
         elif character_class == "Ranger":
-            weapon = " "
+            weapon = "two sickles"
         elif character_class == "Rogue":
-            weapon = " "
+            weapon = "a poisoner's kit and two hidden daggers"
         elif character_class == "Sorcerer":
-            weapon = " "
+            weapon = "darts"
         elif character_class == "Warlock":
-            weapon = " "
+            weapon = "their pact of the chain sprite"
         elif character_class == "Wizard":
-            weapon = " "
+            weapon = "quarter staff"
 
 #####   Half-Orc weapons   #####
 
     elif character_race == "a Half-Orc":
         if character_class == "Barbarian"
-            weapon = ""
+            weapon = "a mace"
         elif character_class == "Bard":
-            weapon = " "
+            weapon = "a javelin"
         elif character_class == "Cleric":
-            weapon = " "
+            weapon = "a club"
         elif character_class == "Druid":
-            weapon = " "
+            weapon = "a spear"
         elif character_class == "Fighter":
-            weapon = " "
+            weapon = "two hand axes"
         elif character_class == "Monk":
-            weapon = " "
+            weapon = "a short sword"
         elif character_class == "Paladin":
-            weapon = " "
+            weapon = "two morning stars"
         elif character_class == "Ranger":
-            weapon = " "
+            weapon = "a dagger and spear combo"
         elif character_class == "Rogue":
-            weapon = " "
+            weapon = "a long sword and two hidden daggers"
         elif character_class == "Sorcerer":
-            weapon = " "
+            weapon = "twin slings"
         elif character_class == "Warlock":
-            weapon = " "
+            weapon = "a light crossbow"
         elif character_class == "Wizard":
-            weapon = " "
+            weapon = "divination spells"
 
 #####   Tiefling weapons   #####
 
     elif character_race == "a Tiefling":
         if character_class == "Barbarian"
-            weapon = ""
+            weapon = "a great axe"
         elif character_class == "Bard":
-            weapon = " "
+            weapon = "a sickle"
         elif character_class == "Cleric":
-            weapon = " "
+            weapon = "a javelin"
         elif character_class == "Druid":
-            weapon = " "
+            weapon = "a javelin"
         elif character_class == "Fighter":
-            weapon = " "
+            weapon = "a morning star"
         elif character_class == "Monk":
-            weapon = " "
+            weapon = "a sickle"
         elif character_class == "Paladin":
-            weapon = " "
+            weapon = "five javelins"
         elif character_class == "Ranger":
-            weapon = " "
+            weapon = "two hand axes"
         elif character_class == "Rogue":
-            weapon = " "
+            weapon = "a hand crossbow and thieves tools"
         elif character_class == "Sorcerer":
-            weapon = " "
+            weapon = "achient meta magic"
         elif character_class == "Warlock":
-            weapon = " "
+            weapon = "the agonising blast cantrip"
         elif character_class == "Wizard":
-            weapon = " "
+            weapon = "conjuration magic"
     else:
         return "I'm sorry, your character is lost. Try recreating one"
 
