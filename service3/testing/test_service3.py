@@ -12,7 +12,7 @@ class TestBase(TestCase):
     def create_app(self):
         return app
 
-#####   Test version 2  #####
+#####   Short test  #####
 
 class TestCreate(Testbase):
     def test_char(self):
@@ -21,7 +21,7 @@ class TestCreate(Testbase):
             self.assertEqual(response.status_code,200)
             self.assertIn(response.data, [b"Barbarian",b"Bard", b"Cleric", b"Druid", b"Fighter", b"Monk", b"Paladin", b"Ranger", b"Rogue", b"Sorcerer", b"Warlock", b"Wizard"])
 
-#####   Test version 1  #####
+#####   Long test  #####
 #class TestResponse(TestBase):
 
 #    def test_barbarian_class(self):
