@@ -20,4 +20,4 @@ def index():
     weapon = requests.post("http://localhost:5003/weapon", data=character)
     #description = requests.post("http://localhost:5003/description")        might add later
 
-    return render_template('index.html', character_race=character_race.text, character_class=character_class.text, info=info, weapon=weapon.text)
+    return render_template('index.html', character_race=character_race.text, character_class=character_class.text, character=character, weapon=weapon.text)
