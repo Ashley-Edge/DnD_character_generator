@@ -8,13 +8,15 @@ from application import app
 
 @app.route('/weapon', methods=['GET', 'POST'])
 def weapon():
+    info = request.data.decode('utf-8')
+    data = info.split(" ")
     character_race = data[0]
     character_class = data[1]
 
 #####   Dwarf weapons   #####
 
     if character_race == "a Dwarf":
-        if character_class == "Barbarian"
+        if character_class == "Barbarian":
             weapon = "a battle axe"
         elif character_class == "Bard":
             weapon = "a light hammer"
@@ -42,7 +44,7 @@ def weapon():
 #####   Elf weapons   #####
 
     elif character_race == "an Elf":
-        if character_class == "Barbarian"
+        if character_class == "Barbarian":
             weapon = "a long sword"
         elif character_class == "Bard":
             weapon = "a rapier"
@@ -70,7 +72,7 @@ def weapon():
 #####   Halfling weapons   #####
 
     elif character_race == "a Halfling":
-        if character_class == "Barbarian"
+        if character_class == "Barbarian":
             weapon = "a club"
         elif character_class == "Bard":
             weapon = "an enchanted lute"
@@ -98,7 +100,7 @@ def weapon():
 #####   Human weapons   #####
 
     elif character_race == "a Human":
-        if character_class == "Barbarian"
+        if character_class == "Barbarian":
             weapon = "two hand axes"
         elif character_class == "Bard":
             weapon = "a magical flute"
@@ -126,7 +128,7 @@ def weapon():
 #####   Dragonborn weapons   #####
 
     elif character_race == "a Dragonborn":
-        if character_class == "Barbarian"
+        if character_class == "Barbarian":
             weapon = "a glaive"
         elif character_class == "Bard":
             weapon = "a long sword"
@@ -154,7 +156,7 @@ def weapon():
 #####   Gnome weapons   #####
 
     elif character_race == "a Gnome":
-        if character_class == "Barbarian"
+        if character_class == "Barbarian":
             weapon = "a war pick"
         elif character_class == "Bard":
             weapon = "a dagger"
@@ -182,7 +184,7 @@ def weapon():
 #####   Half-Elf weapons   #####
 
     elif character_race == "a Half-Elf":
-        if character_class == "Barbarian"
+        if character_class == "Barbarian":
             weapon = "a great sword"
         elif character_class == "Bard":
             weapon = "a hypnotising harp"
@@ -210,7 +212,7 @@ def weapon():
 #####   Half-Orc weapons   #####
 
     elif character_race == "a Half-Orc":
-        if character_class == "Barbarian"
+        if character_class == "Barbarian":
             weapon = "a mace"
         elif character_class == "Bard":
             weapon = "a javelin"
@@ -238,7 +240,7 @@ def weapon():
 #####   Tiefling weapons   #####
 
     elif character_race == "a Tiefling":
-        if character_class == "Barbarian"
+        if character_class == "Barbarian":
             weapon = "a great axe"
         elif character_class == "Bard":
             weapon = "a sickle"
@@ -265,4 +267,4 @@ def weapon():
     else:
         return "I'm sorry, your character is lost. Try recreating one"
 
-    return Response(weapon, mimetype=)
+    return Response(weapon, mimetype="text/plain")

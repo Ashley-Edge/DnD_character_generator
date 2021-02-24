@@ -8,7 +8,7 @@ from application import app
 
 #####   Classes #####
 
-@app.route('/class', methods=['GEiT'])
+@app.route('/class', methods=['GET'])
 def team():
 
     character_classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"]
