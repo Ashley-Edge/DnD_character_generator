@@ -30,9 +30,9 @@ My service-orientated architecture plan
 
 ## Service1
 
-Service 1 basically performs a **GET** request on services 2 and 3, and a **POST** request on service 4. It talks with the other services(2, 3 & 4) to gain the data needed from a MySQL database. Service 1 then uses that information to display it to the user through my HTML/Jinja2 index.html file. Below is my mockup of how I want my end application to look like. The current generated character will be presented followed by a new character button that will essentially refresh the page. Below that the user will be able to see past generated characters. (I will be adding this function last so forgive me if I don't add it in time.)
+Service 1 basically performs a **GET** request on services 2 and 3, and a **POST** request on service 4. It talks with the other services(2, 3 & 4) to gain the data needed from a MySQL database. Service 1 then uses that information to display it to the user through my HTML/Jinja2 index.html file. Below is plan and result of my app.  The current generated character will be presented followed by a new character button that will essentially refresh the page.
 
-![HTML mockup](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed8a01141c2618582185/3b463ac58513f4426d27ae3b330dab11/Html_mock_up.png) ![HTML final](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed8a01141c2618582185/ce498ef3b948100d632edcb3c6c00a9c/Final_HTML.png)
+![HTML](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed8a01141c2618582185/ad9dd739bf1a6ebe3cf1d9e51ae51c60/html_plan_%26_result.png)
 
 ## Database table
 
