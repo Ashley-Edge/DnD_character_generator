@@ -42,7 +42,9 @@ I will be testing this service using unittest.mock library to mock up a response
 
 ## Service2 and service3
 
-Service2 and service3 will act very similar. Service2 will generate a random race for our character.
+Service2 and service3 will act very similar. And will use the same sort of tests.
+
+Service2 will generate a random race for our character.
 ```
 @app.route('/race', methods=['GET'])
 def character_race():
@@ -50,7 +52,18 @@ def character_race():
     character_race = random.choices(character_races)
     return Response(str(character_race[0]), mimetype="text/plain")
 ```
-this character_race will then be used by service_4.
+
+Service3 will generate a random class for our character.
+```
+@app.route('/class', methods=['GET'])
+def character_class():
+
+    character_classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"]
+    character_class = random.choices(character_classes)
+    return Response(str(character_class[0]), mimetype="text/plain")
+```
+
+Both results will then be used by service4
 
 ### Service2 and service3 testing
 
@@ -71,8 +84,6 @@ class TestCreate(TestBase):
         response=self.client.get(url_for('character_class'))
         self.assertEqual(response.status_code,200)
 ```
-
-Results below! 
 
 ![service2 & service3 test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fea0f92ff805d8db0d4d4/a6b86aae2c1dfdd802c715a490daebb6/service2_%26_3_tests.png)
 
