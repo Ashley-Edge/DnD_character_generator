@@ -42,7 +42,7 @@ I will be testing this service using unittest.mock library to mock up a response
 
 ## Service2 and service3
 
-Service2 and service3 will act very similar. And will use the same sort of tests.
+Service2 and service3 will act very similar. Once I have coded and checked that service2 works, I will replicate the code and edit it to select a random class for servive3.
 
 Service2 will generate a random race for our character.
 ```
@@ -53,6 +53,9 @@ def character_race():
     return Response(str(character_race[0]), mimetype="text/plain")
 ```
 
+Success! I can move onto coding service3
+![servive2 is working](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603170c76f01498d525685f1/2107d04c11776ffcc696581b013c14e0/service2_output.png)
+
 Service3 will generate a random class for our character.
 ```
 @app.route('/class', methods=['GET'])
@@ -62,6 +65,9 @@ def character_class():
     character_class = random.choices(character_classes)
     return Response(str(character_class[0]), mimetype="text/plain")
 ```
+
+Now service 3 is working too.
+![servive3 is working](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603170ce4a00323a94314b97/8aa59da57220ffcb984cd57552cb598a/service3_output.png)
 
 Both results will then be used by service4
 
