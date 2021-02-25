@@ -34,6 +34,12 @@ Service 1 basically performs a **GET** request on services 2 and 3, and a **POST
 
 ![HTML](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed8a01141c2618582185/ad9dd739bf1a6ebe3cf1d9e51ae51c60/html_plan_%26_result.png)
 
+### Service1 testing
+
+I will be testing this service using unittest.mock library to mock up a response that I think service 2, 3 and 4 would give me.
+
+![Test results]()
+
 ## Database table
 
 I will be using MySQL to house and generate my D&D characters. Service 1 will determine the characters race, service 3 will determine the characters class and service 4 will combine the results from service 2 and 3 and generate a weapon.
