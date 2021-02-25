@@ -2,7 +2,7 @@
 #                   Routes.py file
 
 #####   Imports #####
-from flask import Flask, Response, request
+from flask import Flask, Response, requests
 import random
 from application import app
 
@@ -12,8 +12,6 @@ def weapon():
     data2 = info.split(".")
     character_race = data2[0]
     character_class = data2[1]
-    print(character_race)
-    print(character_class)
 
 #####   Dwarf weapons   #####
 

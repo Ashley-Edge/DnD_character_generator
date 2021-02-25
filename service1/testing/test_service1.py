@@ -2,11 +2,11 @@
 #                   Test_service1 file
 
 #####   Imports #####
-import unittest
+from unittest.mock import patch
 from flask import url_for
 from flask_testing import TestCase
 
-from app import app
+from application import app
 
 class TestBase(TestCase):
     def create_app(self):
@@ -14,5 +14,11 @@ class TestBase(TestCase):
 
 class TestResponse(TestBase):
     def test_character(self):
-        with patch ('request.get') as g:
-            g.return_value.text = "a Dwarf"
+        with patch("requests.get") as g:
+            with patch("requests.post") as p:
+                g.return_value.text = "an Elf"
+                g.return_value.text = "Fighter"
+                p.return_value.text = "whips"
+
+                response = self.client.get(url_for("index"))
+                self.assertIn(b"You will play an Elf Fighter, who fights using whips")
