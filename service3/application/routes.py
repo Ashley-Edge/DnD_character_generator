@@ -13,6 +13,4 @@ def character_class():
 
     character_classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"]
     character_class = random.choices(character_classes)
-    #character_race = character_races[random.randrange(0,9)]
     return Response(str(character_class[0]), mimetype="text/plain")
-    #return Response(character_class, mimetype="text/plain")

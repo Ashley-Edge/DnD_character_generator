@@ -3,9 +3,10 @@
 
 #####   Imports #####
 from flask import Flask, render_template, request
-import requests
+import requests, random
 from application import app, db
 from application.models import Character
+from sqlalchemy import desc
 
 #####   Routes  #####
 
@@ -24,3 +25,16 @@ def index():
     weapon = requests.post("http://localhost:5003/weapon", data=info)
 
     return render_template('index.html', character_race=string_character_race, character_class=string_character_class, info=info, weapon=weapon.text)
+
+    # Past characters - will work on if I have tim e at the end
+
+#    char=Character.query.order_by(desc("Id")).limit(5).all()
+#    maxno=Character.query.order_by(desc("Id")).first()
+#    randno=random.randint(1,maxno.Id)
+#    randchar=Character.query.filter_by(Id=randno).all()
+
+#    new_character= Character(character_class=string_character_race, character_race=string_character_class, weapon=adjective.text)
+#    db.session.add(new_character)
+#    db.session.commit()
+
+#    return render_template("index.html", character_race=string_character_race, character_class=string_character_class, weapon=weapon.text, char=char, randchar=randchar)
