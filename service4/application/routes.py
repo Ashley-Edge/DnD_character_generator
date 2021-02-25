@@ -9,9 +9,9 @@ from application import app
 @app.route('/weapon', methods=['GET', 'POST'])
 def weapon():
     info = request.data.decode('utf-8')
-    data = info.split(" ")
-    character_race = data[0]
-    character_class = data[1]
+    data2 = info.split(" ")
+    character_race = data2[0]
+    character_class = data2[1]
 
 #####   Dwarf weapons   #####
 
@@ -265,6 +265,6 @@ def weapon():
         elif character_class == "Wizard":
             weapon = "conjuration magic"
     else:
-        return "I'm sorry, your character is lost. Try recreating one"
+        return "..... OH! I'm sorry, your character is lost. Try recreating one"
 
     return Response(weapon, mimetype="text/plain")
