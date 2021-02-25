@@ -40,6 +40,42 @@ I will be testing this service using unittest.mock library to mock up a response
 
 ![Test results]()
 
+## Service2 and service3
+
+Service2 and service3 will act very similar. Service2 will generate a random race for our character.
+```
+@app.route('/race', methods=['GET'])
+def character_race():
+    character_races = ["a Dwarf", "an Elf", "a Halfling", "a Human", "a Dragonborn", "a Gnome", "a Half-Elf", "a Half-Orc", "a Tiefling"]
+    character_race = random.choices(character_races)
+    return Response(str(character_race[0]), mimetype="text/plain")
+```
+this character_race will then be used by service_4.
+
+### Service2 and service3 testing
+
+These tests are very simple. I am simply testing that service2 does in fact return a random race, and service3 does return a random class.
+
+service2 test
+``` 
+class TestCreate(TestBase):
+    def test_character_race(self):
+        response=self.client.get(url_for('character_race'))
+        self.assertEqual(response.status_code,200)
+```
+
+service3 test
+```        
+class TestCreate(TestBase):
+    def test_character_class(self):
+        response=self.client.get(url_for('character_class'))
+        self.assertEqual(response.status_code,200)
+```
+
+Results below! 
+
+![service2 & service3 test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fea0f92ff805d8db0d4d4/a6b86aae2c1dfdd802c715a490daebb6/service2_%26_3_tests.png)
+
 ## Database table
 
 I will be using MySQL to house and generate my D&D characters. Service 1 will determine the characters race, service 3 will determine the characters class and service 4 will combine the results from service 2 and 3 and generate a weapon.
