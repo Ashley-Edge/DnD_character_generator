@@ -12,14 +12,14 @@ from application.models import Character
 @app.route('/', methods=['GET','POST'])
 def index():
     # Gets a race
-    character_race = requests.get("http://localhost:5001/character_race")
+    character_race = requests.get("http://localhost:5001/race")
     string_character_race = character_race.text
 
     # Gets a class
-    character_class = requests.get("http://localhost:5002/character_class")
+    character_class = requests.get("http://localhost:5002/class")
     string_character_class = character_class.text
 
-    info = str(character_race.text) + " " + str(character_class.text)
+    info = str(character_race.text) + "." + str(character_class.text)
     # Gets a weapon
     weapon = requests.post("http://localhost:5003/weapon", data=info)
 

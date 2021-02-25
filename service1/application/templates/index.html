@@ -9,12 +9,12 @@
         <h1 style="color:maroon; text-align: center; text-decoration: underline">Character Generator</h1>
     </div>
     <div>
-        <h2 style="color: maroon; text-align: center"> You will play {{ character_race }} {{ character_race }}.</h2>
-        <h2 style="color: maroon; text-align: center">Who fights using {{ weapon }}.</h2>
+        <h2 style="color: maroon; text-align: center"> You will play {{ character_race }} {{ character_class }}, who fights using {{ weapon }}.</h2>
+        <h3 style="color: maroon; text-align: center">Now that you have your character, it's time to play. The fun of D&D is in playing the game!</h3>
     </div>
     <div>
         <a href="{{ url_for('index')}}"><button>*  New Character   *</button></a>
-        <p>--------------------------------------------------------------------------------------------------------------</p>
+        <hr size="3" width="100%" color="red">
     </div>
 </body>
 <footer><p>© 2021 Ashley Edge.</p></footer>

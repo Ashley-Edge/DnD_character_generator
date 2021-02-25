@@ -9,9 +9,11 @@ from application import app
 @app.route('/weapon', methods=['GET', 'POST'])
 def weapon():
     info = request.data.decode('utf-8')
-    data2 = info.split(" ")
+    data2 = info.split(".")
     character_race = data2[0]
     character_class = data2[1]
+    print(character_race)
+    print(character_class)
 
 #####   Dwarf weapons   #####
 
