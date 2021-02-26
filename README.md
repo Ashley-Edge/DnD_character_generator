@@ -66,7 +66,7 @@ def character_race():
     return Response(str(character_race[0]), mimetype="text/plain")
 ```
 
-Success! I can move onto coding service3
+Success! :smile: I can move onto coding service3
 ![servive2 is working](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603170c76f01498d525685f1/2107d04c11776ffcc696581b013c14e0/service2_output.png)
 
 Service3 will generate a random class for our character.
