@@ -17,13 +17,13 @@
         <h3> </h3>
         <hr size="3" width="100%" color="red">
     </div>
-   <!-- <div>
-      <h3 style="color: maroon; text-decoration: underline">Past characters</h3>
+   <div>
+      <h2 style="color: maroon; text-decoration: underline">Past characters</h2>
 
-        {% for i in Character %}
-        <h4>A {{ character_race }}.</h4>
+        {% for character in old_characters %}
+        <p style="color: maroon">{{character.id}}A mighty {{character.character_race}} {{character.character_class}}, who fought using {{character.weapon}} and whent on amazing adventure!</p>
         {% endfor %}
-    </div> -->
+    </div>
 </body>
 <footer><p>© 2021 Ashley Edge.</p></footer>
 </html>
