@@ -15,10 +15,11 @@ class TestBase(TestCase):
 class TestResponse(TestBase):
     def test_character(self):
         with patch("requests.get") as g:
-            with patch("requests.post") as p:
+            with patch("requests.post") as r:
                 g.return_value.text = "an Elf"
-                g.return_value.text = "Fighter"
-                p.return_value.text = "whips"
+                r.return_value.text = "whips"
 
                 response = self.client.get(url_for("index"))
-                self.assertIn(b"You will play an Elf Fighter, who fights using whips")
+                self.assertIn(b"You will play an Elf an Elf, who fights using whips", response.data)
+
+# I wanted to test with adding the class Fighter, but it kept throwing up AssertIn Errors

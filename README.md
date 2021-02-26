@@ -38,7 +38,12 @@ Service 1 basically performs a **GET** request on services 2 and 3, and a **POST
 
 I will be testing this service using unittest.mock library to mock up a response that I think service 2, 3 and 4 would give me.
 
-![Test results]()
+![Test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed679fe4c334e09a1b31/9dcf50ca7e59cd46a95cdd3b76de095a/service1_test.png)
+
+The line of code that is missing and stopping me from reaching 100% is:
+```
+return f"{self.Id} | {self.character_race} | {self.character_class}| {self.weapon}"
+```
 
 ## Service2 and service3
 
