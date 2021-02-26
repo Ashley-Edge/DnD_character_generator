@@ -11,6 +11,8 @@ class TestBase(TestCase):
     def create_app(self):
         return app
 
+this should only be on service4-2 branch
+
 # class TestCharacters(TestBase):
 #     def test_character(self):
 #         races = [b"a Dwarf", b"an Elf", b"a Halfling", b"a Human", b"a Dragonborn", b"a Gnome", b"a Half-Elf", b"a Half-Orc", b"a Tiefling"]
