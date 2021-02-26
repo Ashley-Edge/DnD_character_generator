@@ -7,13 +7,13 @@ The requirements set for the project are below:
 
 - A Kanban board
 - An Application fully integrated into GitHub, built through Jenkins and deployed to a GCP virtual machine
-- Use Webhooks so that Jenkins recreates and redeploys the changed application from GitHub
 - The project must follow the Service-oriented architecture of at least 4 services that work together
 - The project must be deployed using Docker and Docker Swarm
 - Create an Ansible Playbook that will provide the environment that your application needs to run
+- Use Webhooks so that Jenkins recreates and redeploys the changed application from GitHub
 - The project must make use of NGINX (reverse proxy) to make your application accessible to the user
 
-You should consider the concept of MVP (Minimum Viable Product) as you plan your project, complete all the requirements before you add extra functionality that is not specified above.
+I will be considering the concept of MVP (Minimum Viable Product) as I plan this project, completing all the requirements before adding any extra functionality that isn't specified above.
 
 ## Planning
 I used a Trello board to plan and keep on top of my tasks. I used simple to-do, doing and done lists. I can set myself tasks in the to-do list, remember what I am working on in the doing list (so I can juggle a few tasks at once) and once I have finished a task I will drag it into the done list. [Click here is see it](https://trello.com/b/yaZs4MWM/dd-character-generator)
@@ -100,6 +100,7 @@ class TestCreate(TestBase):
     def test_character_race(self):
         response=self.client.get(url_for('character_race'))
         self.assertEqual(response.status_code,200)
+        self.assertIn(response.data, [b'a Dwarf', b'an Elf', b'a Halfling', b'a Human', b'a Dragonborn', b'a Gnome', b'a Half-Elf', b'a Half-Orc', b'a Tiefling'])
 ```
 
 service3 test
@@ -108,6 +109,7 @@ class TestCreate(TestBase):
     def test_character_class(self):
         response=self.client.get(url_for('character_class'))
         self.assertEqual(response.status_code,200)
+        self.assertIn(response.data, [b"Barbarian",b"Bard", b"Cleric", b"Druid", b"Fighter", b"Monk", b"Paladin", b"Ranger", b"Rogue", b"Sorcerer", b"Warlock", b"Wizard"])
 ```
 
 ![service2 & service3 test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fea0f92ff805d8db0d4d4/a6b86aae2c1dfdd802c715a490daebb6/service2_%26_3_tests.png)
