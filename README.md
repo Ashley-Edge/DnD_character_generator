@@ -28,6 +28,16 @@ I am are required to create a service-orientated architecture for my application
 My service-orientated architecture plan
 ![service-orientated architecture diagram](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/60315b4627b35b4d8fdbc918/e69a347f558248f398c84848cc20f915/services.png)
 
+## MySQL Database
+
+I will be using MySQL to house and generate my D&D characters. Service 1 will determine the characters race, service 3 will determine the characters class and service 4 will combine the results from service 2 and 3 and generate a weapon. In the image below you can see that MySQL has been successfully created. I populated the table with my dummy character with the following code;
+```
+Character1=Character(character_race="a Dwarf", character_class="Fighter", weapon="whips")
+db.session.add(Character1)
+db.session.commit()
+```
+![database table](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/6032bd31e4800e692cccffde/4156f8512cd524997acf22501e61c730/ERD_and_mysql.png)
+
 ## Service1
 
 Service 1 basically performs a **GET** request on services 2 and 3, and a **POST** request on service 4. It talks with the other services(2, 3 & 4) to gain the data needed from a MySQL database. Service 1 then uses that information to display it to the user through my HTML/Jinja2 index.html file. Below is plan and result of my app.  The current generated character will be presented followed by a new character button that will essentially refresh the page.
@@ -36,22 +46,18 @@ Service 1 basically performs a **GET** request on services 2 and 3, and a **POST
 
 ### Service1 testing
 
-I will be testing this service using unittest.mock library to mock up a response that I think service 2, 3 and 4 would give me.
+I will be testing this service by mocking up a response that I think service 2, 3 and 4 would give me.
 ```
-class TestResponse(TestBase):
     def test_character(self):
-        with patch("requests.get") as g:
-            with patch("requests.post") as r:
-                g.return_value.text = "an Elf"
-                r.return_value.text = "whips"
-                response = self.client.get(url_for("index"))
-                self.assertIn(b"You will play an Elf an Elf, who fights using whips", response.data)
+        with requests_mock.mock() as m:
+            m.get("http://localhost:5001/race", text='a Dwarf')
+            m.get("http://localhost:5002/class", text='Barbarian')
+            m.post("http://localhost:5003/weapon", text='a battle axe')
+            response = self.client.get(url_for('index'))
+            self.assertIn(b'a battle axe', response.data)
 ```
 
-![Test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed679fe4c334e09a1b31/9dcf50ca7e59cd46a95cdd3b76de095a/service1_test.png)
-
-The line of code that is missing and stopping me from reaching 100% is on line 18 of modules.py
-`return f"{self.Id} | {self.character_race} | {self.character_class}| {self.weapon}"`
+![Test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed679fe4c334e09a1b31/439f3f3728b7d02dd9195b71e3c81d76/service1_coverage.png)
 
 ## Service2 and service3
 
@@ -105,12 +111,6 @@ class TestCreate(TestBase):
 ```
 
 ![service2 & service3 test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fea0f92ff805d8db0d4d4/a6b86aae2c1dfdd802c715a490daebb6/service2_%26_3_tests.png)
-
-## Database table
-
-I will be using MySQL to house and generate my D&D characters. Service 1 will determine the characters race, service 3 will determine the characters class and service 4 will combine the results from service 2 and 3 and generate a weapon.
-
-![database table](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fe59f98cc114b9881c1d5/6faa609d7cce40ba514acdd5194d0dcd/ERD.png)
 
 ## Acknowledgements
 
