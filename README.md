@@ -48,6 +48,7 @@ Service 1 basically performs a **GET** request on services 2 and 3, and a **POST
 
 I will be testing this service by mocking up a response that I think service 2, 3 and 4 would give me.
 ```
+class TestResponse(TestBase):
     def test_character(self):
         with requests_mock.mock() as m:
             m.get("http://localhost:5001/race", text='a Dwarf')
@@ -55,9 +56,16 @@ I will be testing this service by mocking up a response that I think service 2, 
             m.post("http://localhost:5003/weapon", text='a battle axe')
             response = self.client.get(url_for('index'))
             self.assertIn(b'a battle axe', response.data)
+    def test_character(self):
+        with patch("requests.get") as g:
+            with patch("requests.post") as r:
+                g.return_value.text = "an Elf"
+                r.return_value.text = "whips"
+                response = self.client.get(url_for("index"))
+                self.assertIn(b"You will play an Elf an Elf, who fights using whips", response.data)
 ```
 
-![Test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed679fe4c334e09a1b31/439f3f3728b7d02dd9195b71e3c81d76/service1_coverage.png)
+![Test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed679fe4c334e09a1b31/e687f32ca99e5db19768d53e4b0549a2/service1_test.png)
 
 ## Service2 and service3
 
