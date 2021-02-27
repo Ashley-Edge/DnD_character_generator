@@ -1,12 +1,6 @@
-#Define the base image.
 FROM python:3.7
-#Copy files into images.
-COPY ./requirements.txt . 
-#Execute a command on an intermediate container.
+COPY ./requirements.txt .
 RUN pip3 install -r requirements.txt
-#Copy files into images.
-COPY . . 
-#Selects the port that the container listens on.
+COPY . .
 EXPOSE 5001
-#Define the main process for the container to run on start-up.
-ENTRYPOINT ["gunicorn", "--workers=4", "--bind=0.0.0.0:5001", "app:app"]
+ENTRYPOINT ["python3", "app.py"]

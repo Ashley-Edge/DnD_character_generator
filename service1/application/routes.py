@@ -12,9 +12,15 @@ from sqlalchemy import desc
 
 @app.route('/', methods=['GET','POST'])
 def index():
-    character_race_response = requests.get("http://localhost:5001/race")
-    character_class_response = requests.get("http://localhost:5002/class")
-    weapon_response = requests.post("http://localhost:5003/weapon", json={"character_race":character_race_response.text, "character_class":character_class_response.text})
+        #   To run on localhost unhash this
+    # character_race_response = requests.get("http://localhost:5001/race")
+    # character_class_response = requests.get("http://localhost:5002/class")
+    # weapon_response = requests.post("http://localhost:5003/weapon", json={"character_race":character_race_response.text, "character_class":character_class_response.text})
+    
+        #   For Docker
+    character_race_response = requests.get("http://service2:5001/race")
+    character_class_response = requests.get("http://service3:5002/class")
+    weapon_response = requests.post("http://service4:5003/weapon", json={"character_race":character_race_response.text, "character_class":character_class_response.text})
 
     new_character= Character(character_race=character_race_response.text,character_class=character_class_response.text,weapon=weapon_response.text)
     db.session.add(new_character)
