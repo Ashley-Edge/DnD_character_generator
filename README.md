@@ -23,6 +23,7 @@ I will be considering the concept of MVP (Minimum Viable Product) as I plan this
 * [Service1](#Service1)
 * [Service2 and service3](#Service2-and-service3)
 * [Service4](#Service4)
+* [Different Implementations](Different-Implementations)
 * [Docker](#Docker)
 * [Acknowledgements](#Acknowledgements)
 
@@ -150,9 +151,13 @@ class TestResponse(TestBase):
 
 ![service4 test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/6033b3314942d13f1cd2513f/efbed4842cdd1e8575cd42a5c8214263/service4_test.png)
 
+## Different Implementations
+
+For services 2, 3 and 4 I am required to create 2 different implementations of my app. I must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting the user experience. For this I have decided to treat my implementation as an app update, where new character classes and races have been added. To make it really clear to the user I will be altering the HTML with a "Now with more combinations!" notice. :smile: I will also add the past characters feature I mentioned in my [Service1](#Service1)
+
 ## Docker
 
-I will use Docker compose to create and link my docker containers. First, I want to manually containerise my 4 services and my MySQL database within the same network (DnD-network) to make sure everything is working properly before I move on to writing my docker-compose.yaml file. This will give me the chance to familiarise myself with the concept, edit my code accordingly and write a compatible Dockerfile that does as I want. On my first attempt to get the app up and running again, I had to docker exec into the MySQL container, set up the MySQL character_db database again and grant all privileges to 'ashley'@'172.18.0.2'. To get around having to do this every time I created a directory for my database with a Dockerfile od it's own that will copy my User.sql file into docker-entrypoint-initdb.d/. Within the service1 container, I then ran the create.py file to finalise the connection. Now when I visit [VM's IP address]:5000 the app is working as it did before :smile:
+I will use Docker compose to create and link my docker containers. First, I want to manually containerise my 4 services and my MySQL database within the same network (DnD-network) to make sure everything is working properly before I move on to writing my docker-compose.yaml file. This will give me the chance to familiarise myself with the concept, edit my code accordingly and write a compatible Dockerfile that does as I want. Within the service1 container, I have to run the create.py file to finalise the connection. Now when I visit [VM's IP address]:5000 the app is working as it did before :smile:
 
 ![Initial Docker plan](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602feca94a016c405cfcb02d/eb4ab7cbd70226a9e19f1eb31d7dd303/Initial_Docker_plan.png)
 
