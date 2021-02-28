@@ -135,7 +135,20 @@ class TestCreate(TestBase):
 
 ## Service4
 
+Service 4 will create a weapon for your character to fight with, this weapon will be based upon the results from service 2 and 3 using some pre-defined rules. Below you will find an example of how a weapon is decided for the Dwarf race. This code will be repeated for each race. With service4 all done my app now works and looks like the right-hand image shown in the [Service1](#Service1) section.
+
 ### Service4 testing
+
+Service 4 is another simple test, just to check that if "a Dwarf" race and "Barbarian" class is selected, that "a battle axe" weapon is selected as desired.
+
+```
+class TestResponse(TestBase):
+    def test_weapon(self):
+        response = self.client.post(url_for('weapon'), json={"character_race":"a Dwarf", "character_class":"Barbarian"})
+        self.assertEqual(b"a battle axe", response.data)
+```
+
+![service4 test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/6033b3314942d13f1cd2513f/efbed4842cdd1e8575cd42a5c8214263/service4_test.png)
 
 ## Docker
 
