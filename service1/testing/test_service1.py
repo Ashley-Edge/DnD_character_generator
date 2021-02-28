@@ -31,4 +31,4 @@ class TestResponse(TestBase):
                 response = self.client.get(url_for("index"))
                 self.assertIn(b"You will play an Elf an Elf, who fights using whips", response.data)
 
-# # I wanted to test with adding the class Fighter, but it kept throwing up AssertIn Errors
+# I wanted to test with adding the class Fighter, but it kept throwing up AssertIn Errors

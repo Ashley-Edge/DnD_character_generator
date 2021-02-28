@@ -15,4 +15,4 @@ class TestCreate(TestBase):
     def test_character_race(self):
         response=self.client.get(url_for('character_race'))
         self.assertEqual(response.status_code,200)
-        self.assertIn(response.data, [b'a Dwarf', b'an Elf', b'a Halfling', b'a Human', b'a Dragonborn', b'a Gnome', b'a Half-Elf', b'a Half-Orc', b'a Tiefling'])
+        self.assertIn(response.data, [b'a Dwarf', b'an Elf', b'a Halfling', b'a Human'])
