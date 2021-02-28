@@ -87,7 +87,7 @@ Service2 will generate a random race for our character.
 ```
 @app.route('/race', methods=['GET'])
 def character_race():
-    character_races = ["a Dwarf", "an Elf", "a Halfling", "a Human", "a Dragonborn", "a Gnome", "a Half-Elf", "a Half-Orc", "a Tiefling"]
+    character_races = ["a Dwarf", "an Elf", "a Halfling", "a Human"]
     character_race = random.choices(character_races)
     return Response(str(character_race[0]), mimetype="text/plain")
 ```
@@ -100,7 +100,7 @@ Service3 will generate a random class for our character.
 @app.route('/class', methods=['GET'])
 def character_class():
 
-    character_classes = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"]
+    character_classes = ["Barbarian", "Cleric", "Fighter", "Paladin", "Wizard"]
     character_class = random.choices(character_classes)
     return Response(str(character_class[0]), mimetype="text/plain")
 ```
