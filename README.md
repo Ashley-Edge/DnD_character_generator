@@ -120,7 +120,7 @@ class TestCreate(TestBase):
     def test_character_race(self):
         response=self.client.get(url_for('character_race'))
         self.assertEqual(response.status_code,200)
-        self.assertIn(response.data, [b'a Dwarf', b'an Elf', b'a Halfling', b'a Human', b'a Dragonborn', b'a Gnome', b'a Half-Elf', b'a Half-Orc', b'a Tiefling'])
+        self.assertIn(response.data, [b'a Dwarf', b'an Elf', b'a Halfling', b'a Human'])
 ```
 
 service3 test
@@ -129,7 +129,7 @@ class TestCreate(TestBase):
     def test_character_class(self):
         response=self.client.get(url_for('character_class'))
         self.assertEqual(response.status_code,200)
-        self.assertIn(response.data, [b"Barbarian",b"Bard", b"Cleric", b"Druid", b"Fighter", b"Monk", b"Paladin", b"Ranger", b"Rogue", b"Sorcerer", b"Warlock", b"Wizard"])
+        self.assertIn(response.data, [b"Barbarian",b"Cleric", b"Fighter", b"Paladin", b"Wizard"])
 ```
 
 ![service2 & service3 test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fea0f92ff805d8db0d4d4/a6b86aae2c1dfdd802c715a490daebb6/service2_%26_3_tests.png)
@@ -153,7 +153,7 @@ class TestResponse(TestBase):
 
 ## Different Implementations
 
-For services 2, 3 and 4 I am required to create 2 different implementations of my app. I must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting the user experience. For this I have decided to treat my implementation as an app update, where new character classes and races have been added. To make it really clear to the user I will be altering the HTML with a "Now with more combinations!" notice. :smile: I will also add the past characters feature I mentioned in my [Service1](#Service1)
+For services 2, 3 and 4 I am required to create 2 different implementations of my app. I must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting the user experience. For this I have decided to treat my implementation as an app update, where new character classes and races have been added. To make it really clear to the user I will be altering the HTML with a "Now with more combinations!" notice. :smile: I will also add the past characters feature I mentioned in my [Service1](#Service1) I altered all tests too.
 
 ## Docker
 
