@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+
+  service1:
+    container_name: service1
+    build: ./service1
+    ports: 
+    - target: 5000
+      published: 5000
+      protpcol: tcp
+    depends_on: 
+    - "service4"
+
+  service2:
+    container_name: service2
+    build: ./service2
+    ports: 
+    - target: 5001
+      published: 5001
+      protocol: tcp
+
+  service3:
+    container_name: service3
+    build: ./service3
+    ports: 
+    - target: 5002
+      published: 5002
+      protocol: tcp
+
+  service4:
+    container_name: service4
+    build: ./service4
+    ports: 
+    - target: 5003
+      published: 5003
+      protocol: tcp
+    depends_on: 
+    - "service2"
+    - "service3"
