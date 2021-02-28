@@ -15,6 +15,17 @@ The requirements set for the project are below:
 
 I will be considering the concept of MVP (Minimum Viable Product) as I plan this project, completing all the requirements before adding any extra functionality that isn't specified above.
 
+## Contents
+* [Planning ](#Planning )
+* [Architecture ](#Architecture )
+* [Software Infrastructure](#software-infrastructure)
+* [MySQL Database](#MySQL-Database)
+* [Service1](#Service1)
+* [Service2 and service3](#Service2-and-service3)
+* [Service4](#Service4)
+* [Docker](#Docker)
+* [Acknowledgements](#Acknowledgements)
+
 ## Planning
 I used a Trello board to plan and keep on top of my tasks. I used simple to-do, doing and done lists. I can set myself tasks in the to-do list, remember what I am working on in the doing list (so I can juggle a few tasks at once) and once I have finished a task I will drag it into the done list. [Click here is see it](https://trello.com/b/yaZs4MWM/dd-character-generator)
 
@@ -121,6 +132,10 @@ class TestCreate(TestBase):
 ```
 
 ![service2 & service3 test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fea0f92ff805d8db0d4d4/a6b86aae2c1dfdd802c715a490daebb6/service2_%26_3_tests.png)
+
+## Service4
+
+### Service4 testing
 
 ## Docker
 
