@@ -11,8 +11,8 @@ def weapon():
             "Barbarian" : "a battle axe", 
             "Bard" : "a light hammer", 
             "Cleric" : "a warhammer", 
-            "Druid": "a club", "Fighter": 
-            "a halberd and shield", 
+            "Druid": "a club", 
+            "Fighter": "a halberd and shield", 
             "Monk": "their bare fists", 
             "Paladin": "a battle axe and shield", 
             "Ranger": "two maces", 

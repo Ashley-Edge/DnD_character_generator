@@ -5,7 +5,10 @@
 </head>
 <body background="https://images.unsplash.com/photo-1528458965990-428de4b1cb0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1870&q=80">
     <div>
-         <img src="https://db4sgowjqfwig.cloudfront.net/game_systems/251/assets/357032/DnD5E_Large.png?1407685841" alt="D&D logo" style="height:auto;max-width:100%;">
+        <img src="https://db4sgowjqfwig.cloudfront.net/game_systems/251/assets/357032/DnD5E_Large.png?1407685841" alt="D&D logo" style="height:auto;max-width:100%;">
+        <hr size="2" width="100%" color="darkgreen">
+        <p style = "color: darkgreen; text-align: center">NOW WITH NEW RACES AND CLASSES!</p>
+        <hr size="2" width="100%" color="darkgreen">
         <h1 style="color:maroon; text-align: center; text-decoration: underline">Character Generator</h1>
     </div>
     <div>
@@ -19,9 +22,8 @@
     </div>
    <div>
       <h2 style="color: maroon; text-decoration: underline">Past characters</h2>
-
         {% for character in old_characters %}
-        <p style="color: maroon">{{character.id}}A mighty {{character.character_race}} {{character.character_class}}, who fought using {{character.weapon}} and whent on amazing adventure!</p>
+        <p style="color: maroon">{{character.id}}Previously, {{character.character_race}} {{character.character_class}}, who fought using {{character.weapon}} and whent on amazing adventure!</p>
         {% endfor %}
     </div>
 </body>
