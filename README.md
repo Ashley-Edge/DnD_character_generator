@@ -6,12 +6,12 @@ This repository forms my DevOps Core Practical Project Specification individual 
 The requirements set for the project are below:
 
 - A Kanban board
-- An Application fully integrated into GitHub, built through Jenkins and deployed to a GCP virtual machine
 - The project must follow the Service-oriented architecture of at least 4 services that work together
+- An Application fully integrated into GitHub, built through Jenkins and deployed to a GCP virtual machine
+- The project must make use of NGINX (reverse proxy) to make your application accessible to the user
 - The project must be deployed using Docker and Docker Swarm
 - Create an Ansible Playbook that will provide the environment that your application needs to run
 - Use Webhooks so that Jenkins recreates and redeploys the changed application from GitHub
-- The project must make use of NGINX (reverse proxy) to make your application accessible to the user
 
 I will be considering the concept of MVP (Minimum Viable Product) as I plan this project, completing all the requirements before adding any extra functionality that isn't specified above.
 
@@ -121,6 +121,12 @@ class TestCreate(TestBase):
 ```
 
 ![service2 & service3 test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fea0f92ff805d8db0d4d4/a6b86aae2c1dfdd802c715a490daebb6/service2_%26_3_tests.png)
+
+## Docker
+
+I will use Docker compose to create and link my docker containers. First, I want to manually containerise my 4 services and my MySQL database within the same network (DnD-network) to make sure everything is working properly before I move on to writing my docker-compose.yaml file. This will give me the chance to familiarise myself with the concept, edit my code accordingly and write a compatible Dockerfile that does as I want. To get the app up and running again, I had to docker exec into the MySQL container and set up the MySQL character_db database again and grant all privileges to 'ashley'@'172.18.02'. Within the service1 container, I then ran the create.py file to finalise the connection. Now when I visit [VM's IP address]:5000 the app is working as it did before :smile:
+
+![Initial Docker plan](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602feca94a016c405cfcb02d/eb4ab7cbd70226a9e19f1eb31d7dd303/Initial_Docker_plan.png)
 
 ## Acknowledgements
 
