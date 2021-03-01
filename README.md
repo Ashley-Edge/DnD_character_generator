@@ -16,15 +16,16 @@ The requirements set for the project are below:
 I will be considering the concept of MVP (Minimum Viable Product) as I plan this project, completing all the requirements before adding any extra functionality that isn't specified above.
 
 ## Contents
-* [Planning ](#Planning )
-* [Architecture ](#Architecture )
+* [Planning ](#Planning)
+* [Architecture ](#Architecture)
 * [Software Infrastructure](#software-infrastructure)
 * [MySQL Database](#MySQL-Database)
 * [Service1](#Service1)
 * [Service2 and service3](#Service2-and-service3)
 * [Service4](#Service4)
-* [Different Implementations](Different-Implementations)
+* [Different Implementations](#Different-Implementations)
 * [Docker](#Docker)
+* [CI Pipeline](#CI-Pipeline)
 * [Acknowledgements](#Acknowledgements)
 
 ## Planning
@@ -100,7 +101,7 @@ Service3 will generate a random class for our character.
 @app.route('/class', methods=['GET'])
 def character_class():
 
-    character_classes = ["Barbarian", "Cleric", "Fighter", "Paladin", "Wizard"]
+    character_classes = ["Barbarian","Cleric", "Fighter", "Paladin", "Wizard"]
     character_class = random.choices(character_classes)
     return Response(str(character_class[0]), mimetype="text/plain")
 ```
@@ -129,7 +130,7 @@ class TestCreate(TestBase):
     def test_character_class(self):
         response=self.client.get(url_for('character_class'))
         self.assertEqual(response.status_code,200)
-        self.assertIn(response.data, [b"Barbarian",b"Cleric", b"Fighter", b"Paladin", b"Wizard"])
+        self.assertIn(response.data, [b"Barbarian",b"Cleric", b"Fighter", b"Wizard"])
 ```
 
 ![service2 & service3 test results](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fea0f92ff805d8db0d4d4/a6b86aae2c1dfdd802c715a490daebb6/service2_%26_3_tests.png)
@@ -163,7 +164,12 @@ I will use Docker compose to create and link my docker containers. First, I want
 
 ![Initial Docker plan](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603c1dc350ef191078c9e83d/961809649554ede20021c83f717bce12/Docker_plan.png)
 
+## CI Pipeline
+
+Below you can see my continuous integration (CI) pipeline. It depicts how everything in this project works and connects together. Jenkins allows for continuous and automatic integration of any new code(new implementations).
+
+![CI Pipeline](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed27a6ad176c76138285/14e4cce5d371fe953ae8f311de37da93/CI_Pipeline.png)
+
 ## Acknowledgements
 
-I would like to thank all my trainers (Ben Hesketh, Jay Grindrod, Nathan Forester Peter Rhodes and Raji Kolluru) for their teaching and support. I would also like to thank my classmates for their help, support and motivation, as well as the community of stack overflow. I would also like to state that I in no way own the Races, Classes and Weapons mentioned in this application. All information (Logo's included) belong to Dungeons & Dragons and sourced from their "Player's Handbook" 5th edition. If you have stumbled upon this app, liked it and wish to use it yourself, feel free. If you have any notes for improvements I would love to hear from you.
-
+I would like to thank all my trainers (Ben Hesketh, Jay Grindrod, Nathan Forester, Peter Rhodes and Raji Kolluru) for their teaching, continuous help and support. I would also like to thank my classmates for their help, support and motivation, as well as the community of stack overflow. I would also like to state that I in no way own the Races, Classes and Weapons mentioned in this application. All information (Logo's included) belong to Dungeons & Dragons and sourced from their "Player's Handbook" 5th edition. If you have stumbled upon this app, liked it and wish to use it yourself, feel free. If you have any notes for improvements I would love to hear from you.
