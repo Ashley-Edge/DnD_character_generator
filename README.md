@@ -16,14 +16,14 @@ The requirements set for the project are below:
 I will be considering the concept of MVP (Minimum Viable Product) as I plan this project, completing all the requirements before adding any extra functionality that isn't specified above.
 
 ## Contents
-* [Planning ](#Planning )
-* [Architecture ](#Architecture )
+* [Planning ](#Planning)
+* [Architecture ](#Architecture)
 * [Software Infrastructure](#software-infrastructure)
 * [MySQL Database](#MySQL-Database)
 * [Service1](#Service1)
 * [Service2 and service3](#Service2-and-service3)
 * [Service4](#Service4)
-* [Different Implementations](Different-Implementations)
+* [Different Implementations](#Different-Implementations)
 * [Docker](#Docker)
 * [CI Pipeline](#CI-Pipeline)
 * [Acknowledgements](#Acknowledgements)
@@ -154,7 +154,9 @@ class TestResponse(TestBase):
 
 ## Different Implementations
 
-For services 2, 3 and 4 I am required to create 2 different implementations of my app. I must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting the user experience. For this I have decided to treat my implementation as an app update, where new character classes and races have been added. To make it really clear to the user I will be altering the HTML with a "Now with more combinations!" notice. :smile: I will also add the past characters feature I mentioned in my [Service1](#Service1) I altered all tests too.
+For services 2, 3 and 4 I am required to create 2 different implementations of my app. I must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting the user experience. For this, I have decided to treat my implementation as an app update, where new character classes and races have been added. To make it really clear to the user I will be altering the HTML with a "Now with more combinations!" notice. :smile: I will also add the past characters feature I mentioned in my [Service1](#Service1) I altered all tests too.
+
+![new HTML](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603c16735e1ccc63c12ef671/318409a68801e1edba19fa342067cbaf/app_version2.png)
 
 ## Docker
 
