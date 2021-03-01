@@ -1,8 +1,8 @@
 yesall:
   children:
-    docker:
-      hosts:
-        10.172.0.13
+    # docker:
+    #   hosts:
+    #     10.172.0.13
     manager:
       hosts:
         10.172.0.5
