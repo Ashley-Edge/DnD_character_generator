@@ -25,6 +25,7 @@ I will be considering the concept of MVP (Minimum Viable Product) as I plan this
 * [Service4](#Service4)
 * [Different Implementations](Different-Implementations)
 * [Docker](#Docker)
+* [CI Pipeline](#CI-Pipeline)
 * [Acknowledgements](#Acknowledgements)
 
 ## Planning
@@ -161,8 +162,12 @@ I will use Docker compose to create and link my docker containers. First, I want
 
 ![Initial Docker plan](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603c1dc350ef191078c9e83d/961809649554ede20021c83f717bce12/Docker_plan.png)
 
+## CI Pipeline
+
+Below you can see my continuous integration (CI) pipeline. It depicts how everything in this project works and connects together. Jenkins allows for continuous and automatic integration of any new code(new implementations).
+
+![CI Pipeline](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed27a6ad176c76138285/14e4cce5d371fe953ae8f311de37da93/CI_Pipeline.png)
 
 ## Acknowledgements
 
-I would like to thank all my trainers (Ben Hesketh, Jay Grindrod, Nathan Forester Peter Rhodes and Raji Kolluru) for their teaching and support. I would also like to thank my classmates for their help, support and motivation, as well as the community of stack overflow. I would also like to state that I in no way own the Races, Classes and Weapons mentioned in this application. All information (Logo's included) belong to Dungeons & Dragons and sourced from their "Player's Handbook" 5th edition. If you have stumbled upon this app, liked it and wish to use it yourself, feel free. If you have any notes for improvements I would love to hear from you.
-
+I would like to thank all my trainers (Ben Hesketh, Jay Grindrod, Nathan Forester, Peter Rhodes and Raji Kolluru) for their teaching, continuous help and support. I would also like to thank my classmates for their help, support and motivation, as well as the community of stack overflow. I would also like to state that I in no way own the Races, Classes and Weapons mentioned in this application. All information (Logo's included) belong to Dungeons & Dragons and sourced from their "Player's Handbook" 5th edition. If you have stumbled upon this app, liked it and wish to use it yourself, feel free. If you have any notes for improvements I would love to hear from you.
