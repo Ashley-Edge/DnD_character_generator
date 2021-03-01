@@ -157,9 +157,10 @@ For services 2, 3 and 4 I am required to create 2 different implementations of m
 
 ## Docker
 
-I will use Docker compose to create and link my docker containers. First, I want to manually containerise my 4 services and my MySQL database within the same network (DnD-network) to make sure everything is working properly before I move on to writing my docker-compose.yaml file. This will give me the chance to familiarise myself with the concept, edit my code accordingly and write a compatible Dockerfile that does as I want. Within the service1 container, I have to run the create.py file to finalise the connection. Now when I visit [VM's IP address]:5000 the app is working as it did before :smile:
+I will use Docker compose to create and link my docker containers. First, I want to manually containerise my 4 services and my MySQL database within the same network (DnD-network) to make sure everything is working properly before I move on to writing my docker-compose.yaml file. This will give me the chance to familiarise myself with the concept, edit my code accordingly and write a compatible Dockerfile that does as I want. Within the service1 container, I have to run the create.py file to finalise the connection. Now when I visit [VM's IP address]:5000 the app is working as it did before :smile: Wrote a Docker-compose.yaml file based on what I learnt from manually creating my container.
 
-![Initial Docker plan](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602feca94a016c405cfcb02d/eb4ab7cbd70226a9e19f1eb31d7dd303/Initial_Docker_plan.png)
+![Initial Docker plan](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603c1dc350ef191078c9e83d/961809649554ede20021c83f717bce12/Docker_plan.png)
+
 
 ## Acknowledgements
 
