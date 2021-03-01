@@ -39,7 +39,10 @@ My initial Trello board layout to get me started. More tasks will be added to th
 I am are required to create a service-orientated architecture for my application, this application must be composed of at least 4 services that work together. Service 1 will be my app's core service. Service 1 will render my Jinja2/HTML templates I need to interact with my application, it will also be responsible for communicating with the other 3 services, and finally for persisting my character data in an SQL database. Service 2 and 3 will both create a random Race and Class respectively for the D&D character, grabbed from the official D&D Player's Handbook. Service 4 will create a weapon for your character to fight with, this weapon will be based upon the results from service 2 and 3 using some pre-defined rules. For the purpose of this project, I will be keeping my application simple in order to hit the MVP in time for the deadline. For services 2, 3 and 4 I am required to create 2 different implementations, I must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting my user's experience. I will talk about this later on in this README.md file.
 
 My service-orientated architecture plan
-![service-orientated architecture diagram](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/60315b4627b35b4d8fdbc918/78f1e1f01828728ff7d697a312bf9bf0/Services.png)
+![1st service-orientated architecture](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/60315b4627b35b4d8fdbc918/78f1e1f01828728ff7d697a312bf9bf0/Services.png)
+
+After working through the project my plan has evolved
+![2nd service-orientated architecture](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/60315b4627b35b4d8fdbc918/a7712b08ff6008825288d06ae81b9ed3/updated_services.png)
 
 ## MySQL Database
 
@@ -163,6 +166,12 @@ For services 2, 3 and 4 I am required to create 2 different implementations of m
 I will use Docker compose to create and link my docker containers. First, I want to manually containerise my 4 services and my MySQL database within the same network (DnD-network) to make sure everything is working properly before I move on to writing my docker-compose.yaml file. This will give me the chance to familiarise myself with the concept, edit my code accordingly and write a compatible Dockerfile that does as I want. Within the service1 container, I have to run the create.py file to finalise the connection. Now when I visit [VM's IP address]:5000 the app is working as it did before :smile: Wrote a Docker-compose.yaml file based on what I learnt from manually creating my container.
 
 ![Initial Docker plan](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603c1dc350ef191078c9e83d/961809649554ede20021c83f717bce12/Docker_plan.png)
+
+## Ansible
+
+I will be using Ansible to configure my vm docker swarm. My swarm will be made up of a DnD-nginx, DnD-manager and DnD-worker GCP vm's. The user will access the app through DnD-nginx's IP on port 80 to protect the IP addresses of my actual ap.
+
+![Ansible Docker Swarm](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603c696e03d8af7b8c6ca593/f4f12ffbb37e33b3a8aa4c2ec563568d/Swarm.png)
 
 ## CI Pipeline
 
