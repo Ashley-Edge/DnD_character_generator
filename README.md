@@ -25,6 +25,7 @@ I will be considering the concept of MVP (Minimum Viable Product) as I plan this
 * [Service4](#Service4)
 * [Different Implementations](#Different-Implementations)
 * [Docker](#Docker)
+* [Ansible](#Ansible)
 * [CI Pipeline](#CI-Pipeline)
 * [Acknowledgements](#Acknowledgements)
 
