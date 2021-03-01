@@ -1,15 +1,15 @@
 version: "3.8"
 services:
 
-  nginx:
-    image: nginx:latest
-    volumes:
-    - type: bind
-      source: ./nginx/nginx.conf
-      target: /etc/nginx/nginx.conf
-    ports: 
-    - target: 80
-      published: 80
+  # nginx:
+  #   image: nginx:latest
+  #   volumes:
+  #   - type: bind
+  #     source: ./nginx/nginx.conf
+  #     target: /etc/nginx/nginx.conf
+  #   ports: 
+  #   - target: 80
+  #     published: 80
 
   service1:
     build: ./service1
@@ -18,6 +18,8 @@ services:
     - target: 5000
       published: 5000
       protocol: tcp
+    # deploy:
+    #     replicas: 2
 
   service2:
     build: ./service2
@@ -26,6 +28,8 @@ services:
     - target: 5001
       published: 5001
       protocol: tcp
+    # deploy:
+    #     replicas: 2
 
   service3:
     build: ./service3
@@ -34,6 +38,8 @@ services:
     - target: 5002
       published: 5002
       protocol: tcp
+    # deploy:
+    #     replicas: 2
 
   service4:
     build: ./service4
@@ -42,13 +48,24 @@ services:
     - target: 5003
       published: 5003
       protocol: tcp
+    # deploy:
+    #     replicas: 2
 
   database:
     build: ./database
-    image: ashleyedge/database:latest  
-    ports:
+    image: ashleyedge/database
+    ports: 
     - target: 3306
       published: 3306
       protocol: tcp
-    environment: 
+    # deploy:
+    #     replicas: 2
+    volumes:
+    - type: volume
+      source: character_db-volume
+      target: /var/lib/mysql
+    environment:
       MYSQL_ROOT_PASSWORD: root
+
+volumes:
+  character_db-volume:  
