@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build-Images'){
             steps{
-                sh './scripts/appbuild.sh'
+                sh './scripts/appbuild.sh' echo $?
             }
         }
         stage('Deploy-App'){
