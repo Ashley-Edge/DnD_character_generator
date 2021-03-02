@@ -3,43 +3,43 @@ services:
 
   service1:
     build: ./service1
-    image: ashleyedge/service1:${app_version}
+    image: ashleyedge/service1
     ports: 
     - target: 5000
       published: 5000
       protocol: tcp
-    deploy:
-        replicas: 2
+    # deploy:
+    #     replicas: 2
 
   service2:
     build: ./service2
-    image: ashleyedge/service2:${app_version}
+    image: ashleyedge/service2
     ports: 
     - target: 5001
       published: 5001
       protocol: tcp
-    deploy:
-        replicas: 2
+    # deploy:
+    #     replicas: 2
 
   service3:
     build: ./service3
-    image: ashleyedge/service3:${app_version}
+    image: ashleyedge/service3
     ports: 
     - target: 5002
       published: 5002
       protocol: tcp
-    deploy:
-        replicas: 2
+    # deploy:
+    #     replicas: 2
 
   service4:
     build: ./service4
-    image: ashleyedge/service4:${app_version}
+    image: ashleyedge/service4
     ports: 
     - target: 5003
       published: 5003
       protocol: tcp
-    deploy:
-        replicas: 2
+    # deploy:
+    #     replicas: 2
 
   database:
     build: ./database
@@ -48,8 +48,8 @@ services:
     - target: 3306
       published: 3306
       protocol: tcp
-    deploy:
-        replicas: 2
+    # deploy:
+    #     replicas: 2
     volumes:
     - type: volume
       source: character_db-volume
