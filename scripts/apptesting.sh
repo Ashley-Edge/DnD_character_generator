@@ -1,8 +1,7 @@
 # Install dependencies
 sudo update -y
 sudo upgrade -y
-sudo apt install -y python3-pip
-sudo pip3 install --upgrade pip
+sudo apt install -y python3 python3-pip
 
 # cd into service1, install requirements and test it
 cd service1
