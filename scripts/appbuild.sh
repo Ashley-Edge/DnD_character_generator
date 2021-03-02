@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Remove current containers
 docker-compose down --rmi all
 # Re-build the containers again

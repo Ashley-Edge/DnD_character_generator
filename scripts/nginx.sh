@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ssh 10.172.0.12 << EOF
 sudo rm -rf qa_project
 git clone https://github.com/Ashley-Edge/DnD_character_generator.git

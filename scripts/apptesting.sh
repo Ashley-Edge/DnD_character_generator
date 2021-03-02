@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Install dependencies
 sudo update -y
 sudo upgrade -y

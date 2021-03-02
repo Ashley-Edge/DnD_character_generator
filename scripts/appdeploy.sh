@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Login dnd-manager
 ssh 10.172.0.5 << EOF
 sudo rm -rf DnD_character_generator

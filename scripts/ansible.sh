@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Enter the ansible file
 cd ansible
 # Run Ansible
