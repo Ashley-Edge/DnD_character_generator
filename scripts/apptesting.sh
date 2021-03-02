@@ -6,6 +6,7 @@ sudo apt install -y python3 python3-pip
 # cd into service1, install requirements and test it
 cd service1
 pip3 install -r requirements.txt
+python3 create.py
 pytest --cov=application
 
 # cd into service2 and test it
