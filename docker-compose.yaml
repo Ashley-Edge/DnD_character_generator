@@ -1,19 +1,9 @@
 version: "3.8"
 services:
 
-  # nginx:
-  #   image: nginx:latest
-  #   volumes:
-  #   - type: bind
-  #     source: ./nginx/nginx.conf
-  #     target: /etc/nginx/nginx.conf
-  #   ports: 
-  #   - target: 80
-  #     published: 80
-
   service1:
     build: ./service1
-    image: ashleyedge/service1:latest 
+    image: ashleyedge/service1:${app_version}
     ports: 
     - target: 5000
       published: 5000
@@ -23,7 +13,7 @@ services:
 
   service2:
     build: ./service2
-    image: ashleyedge/service2:latest 
+    image: ashleyedge/service2:${app_version}
     ports: 
     - target: 5001
       published: 5001
@@ -33,7 +23,7 @@ services:
 
   service3:
     build: ./service3
-    image: ashleyedge/service3:latest 
+    image: ashleyedge/service3:${app_version}
     ports: 
     - target: 5002
       published: 5002
@@ -43,7 +33,7 @@ services:
 
   service4:
     build: ./service4
-    image: ashleyedge/service4:latest 
+    image: ashleyedge/service4:${app_version}
     ports: 
     - target: 5003
       published: 5003

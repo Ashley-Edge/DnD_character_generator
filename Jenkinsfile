@@ -1,5 +1,9 @@
 pipeline {
-    agent any 
+    agent any
+    environment {
+            app_version = 'v1'
+            rollback = 'false'
+        } 
     stages{
         stage('AppTesting'){
             steps{
