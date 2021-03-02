@@ -1,5 +1,4 @@
 ---
-# tasks file for docker
   - name: Install packages list
     apt:
       pkg:
