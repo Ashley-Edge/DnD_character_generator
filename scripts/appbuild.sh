@@ -1,3 +1,4 @@
+pwd
 # Remove current containers
 sudo docker-compose down --rmi all
 # Re-build the containers again
