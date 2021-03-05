@@ -17,8 +17,8 @@ I will be considering the concept of MVP (Minimum Viable Product) as I plan this
 
 ## Contents
 * [Planning ](#Planning)
+* [Risk assessment](Risk_assessment)
 * [Architecture ](#Architecture)
-* [Software Infrastructure](#software-infrastructure)
 * [MySQL Database](#MySQL-Database)
 * [Service1](#Service1)
 * [Service2 and service3](#Service2-and-service3)
@@ -27,6 +27,7 @@ I will be considering the concept of MVP (Minimum Viable Product) as I plan this
 * [Docker](#Docker)
 * [Ansible](#Ansible)
 * [CI Pipeline](#CI-Pipeline)
+* [Jenkins](#Jenkins)
 * [Acknowledgements](#Acknowledgements)
 
 ## Planning
@@ -34,6 +35,10 @@ I used a Trello board to plan and keep on top of my tasks. I used simple to-do, 
 
 My initial Trello board layout to get me started. More tasks will be added to the to-do list as required
 ![Initial Trello board](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fea0f92ff805d8db0d4d4/a73aa479e027544251dc59aba9caf679/Trello_start_point.png)
+
+## Risk assessment
+
+Below you will find my risk assessment for this project. Two things from the table occurred to me. Towards the last stage of the project (Jenkins), while I was debugging to make sure my app was built and deployed through Jenkins, my DnD-manager VM became unviable. I somehow managed to lose side privileges and was unable to install/alter any documents. This also meant that Jenkins would no longer attempt to build my app at all. I had to spin up a fresh VM and re-configure everything. As a result, I was unable to finish the project on time. Luckily I had before this occurred I had pushed my code to this GitHub repo. I have spent some time after the handing deadline to complete this project as I absolutely loved working on this.
 
 ## Architecture
 
@@ -179,6 +184,8 @@ I will be using Ansible to configure my vm docker swarm. My swarm will be made u
 Below you can see my continuous integration (CI) pipeline. It depicts how everything in this project works and connects together. Jenkins allows for continuous and automatic integration of any new code(new implementations).
 
 ![CI Pipeline](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed27a6ad176c76138285/14e4cce5d371fe953ae8f311de37da93/CI_Pipeline.png)
+
+## Jenkins
 
 ## Acknowledgements
 
