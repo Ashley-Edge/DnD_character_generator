@@ -16,10 +16,9 @@ The requirements set for the project are below:
 I will be considering the concept of MVP (Minimum Viable Product) as I plan this project, completing all the requirements before adding any extra functionality that isn't specified above.
 
 ## Contents
-* [Planning](#Planning)
-* [Risk assessment](Risk_assessment)
+* [Planning ](#Planning)
+* [Risk assessment](#Risk_assessment)
 * [Architecture ](#Architecture)
-* [Software Infrastructure](#software-infrastructure)
 * [MySQL Database](#MySQL-Database)
 * [Service1](#Service1)
 * [Service2 and service3](#Service2-and-service3)
@@ -28,6 +27,7 @@ I will be considering the concept of MVP (Minimum Viable Product) as I plan this
 * [Docker](#Docker)
 * [Ansible](#Ansible)
 * [CI Pipeline](#CI-Pipeline)
+* [Jenkins](#Jenkins)
 * [Acknowledgements](#Acknowledgements)
 
 ## Planning
