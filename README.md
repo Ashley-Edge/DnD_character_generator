@@ -17,7 +17,7 @@ I will be considering the concept of MVP (Minimum Viable Product) as I plan this
 
 ## Contents
 * [Planning ](#Planning)
-* [Risk assessment](Risk_assessment)
+* [Risk assessment](#Risk_assessment)
 * [Architecture ](#Architecture)
 * [MySQL Database](#MySQL-Database)
 * [Service1](#Service1)
@@ -39,6 +39,8 @@ My initial Trello board layout to get me started. More tasks will be added to th
 ## Risk assessment
 
 Below you will find my risk assessment for this project. Two things from the table occurred to me. Towards the last stage of the project (Jenkins), while I was debugging to make sure my app was built and deployed through Jenkins, my DnD-manager VM became unviable. I somehow managed to lose side privileges and was unable to install/alter any documents. This also meant that Jenkins would no longer attempt to build my app at all. I had to spin up a fresh VM and re-configure everything. As a result, I was unable to finish the project on time. Luckily I had before this occurred I had pushed my code to this GitHub repo. I have spent some time after the handing deadline to complete this project as I absolutely loved working on this.
+
+![risk assessment](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fec7f0fb60339229bfd61/bdab610e8f7e989bee0acb9c6edc5571/risk_assesment.png)
 
 ## Architecture
 
