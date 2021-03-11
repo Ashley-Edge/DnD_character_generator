@@ -14,7 +14,7 @@ The requirements set for the project are below:
 - Use Webhooks so that Jenkins recreates and redeploys the changed application from GitHub
 
 I will be considering the concept of MVP (Minimum Viable Product) as I plan this project, completing all the requirements before adding any extra functionality that isn't specified above.
-
+<!-- 
 ## Contents
 * [Planning ](#Planning)
 * [Risk assessment](#Risk_assessment)
@@ -28,7 +28,7 @@ I will be considering the concept of MVP (Minimum Viable Product) as I plan this
 * [Ansible](#Ansible)
 * [CI Pipeline](#CI-Pipeline)
 * [Jenkins](#Jenkins)
-* [Acknowledgements](#Acknowledgements)
+* [Acknowledgements](#Acknowledgements) -->
 
 ## Planning
 I used a Trello board to plan and keep on top of my tasks. I used simple to-do, doing and done lists. I can set myself tasks in the to-do list, remember what I am working on in the doing list (so I can juggle a few tasks at once) and once I have finished a task I will drag it into the done list. [Click here is see it](https://trello.com/b/yaZs4MWM/dd-character-generator)
