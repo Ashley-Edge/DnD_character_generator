@@ -28,3 +28,8 @@
   hosts: worker
   roles:
     - worker
+- name: Set up nginx
+  become: true
+  hosts: nginx
+  roles:
+    - nginx
