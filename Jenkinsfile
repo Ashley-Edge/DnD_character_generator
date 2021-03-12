@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Build-Images'){
             steps{
-                sh 'docker login -u ashleyedge -p PeneloPig1989 dockerregistry.cloud.remote'
+                sh 'docker login -u ashleyedge -p PeneloPig1989 ashleyedge'
                 sh './scripts/appbuild.sh'
             }
         }
