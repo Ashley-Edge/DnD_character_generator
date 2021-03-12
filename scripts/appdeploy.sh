@@ -1,6 +1,7 @@
 # Login dnd-managerz
 # ssh 10.172.0.15 << EOF
-ssh -i /etc/ssh/ssh_host_rsa_key 10.172.0.15 << EOF
+scp -i ~/.ssh/id_rsa docker-compose.yaml jenkins@manager:/home/jenkins/docker-compose.yaml
+ssh -i ~/.ssh/id_rsa jenkins@manager << EOF
 sudo rm -rf DnD_character_generator
 git clone https://github.com/Ashley-Edge/DnD_character_generator.git
 cd DnD_character_generator
