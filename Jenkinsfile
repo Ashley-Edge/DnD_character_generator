@@ -17,9 +17,7 @@ pipeline {
         }
         stage('Build-Images'){
             steps{
-                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
-                    sh './scripts/appbuild.sh'
-                }
+                sh './scripts/appbuild.sh'
             }
         }
         stage('Deploy-App'){
