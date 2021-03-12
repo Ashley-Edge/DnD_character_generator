@@ -17,7 +17,7 @@ I will be considering the concept of MVP (Minimum Viable Product) as I plan this
 
 ## Contents
 * [Planning ](#Planning)
-* [Risk assessment](#Risk_assessment)
+* [Risk assessment](#Risk-assessment)
 * [Architecture ](#Architecture)
 * [MySQL Database](#MySQL-Database)
 * [Service1](#Service1)
@@ -177,15 +177,30 @@ I will use Docker compose to create and link my docker containers. First, I want
 
 ## Ansible
 
-I will be using Ansible to configure my vm docker swarm. My swarm will be made up of a DnD-nginx, DnD-manager and DnD-worker GCP vm's. The user will access the app through DnD-nginx's IP on port 80 to protect the IP addresses of my actual ap.
+I will be using Ansible to configure my vm docker swarm. My swarm will be made up of a DnD-nginx, DnD-manager and DnD-worker GCP VM's. The user will access the app through DnD-nginx's IP on port 80 to protect the IP addresses of my actual ap.
 
 ![Ansible Docker Swarm](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603c696e03d8af7b8c6ca593/f4f12ffbb37e33b3a8aa4c2ec563568d/Swarm.png)
+
+After a few trial and errors, I finally got ansible to configure my 3 VM that will become my swarm as planned above. 
+
+```
+sudo ansible-playbook -i inventory.yaml playbook.yaml
+```
+
+I did initially have a docker problem. Uninstalling and re-installing docker seemed to have fixed the problem :smile:
+
+![Ansible outcome](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/603959522329d27be1821f6c/1ef18b61c584efe0620c43dd89a9de12/Ansible.png)
 
 ## CI Pipeline
 
 Below you can see my continuous integration (CI) pipeline. It depicts how everything in this project works and connects together. Jenkins allows for continuous and automatic integration of any new code(new implementations).
 
 ![CI Pipeline](https://trello-attachments.s3.amazonaws.com/602d3594eb14c72fafa7733c/602fed27a6ad176c76138285/14e4cce5d371fe953ae8f311de37da93/CI_Pipeline.png)
+
+
+## Jenkins
+
+Now that I have everything working separetly, It's time to move onto Jenkins.
 
 ## Acknowledgements
 
