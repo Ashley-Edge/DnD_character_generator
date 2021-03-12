@@ -1,8 +1,6 @@
 # Remove any previous locally built images 
 docker-compose down --rmi local
-# build the images for the services from the docker-compose.yaml
-docker-compose build 
-# log into docker with the account credentials  
+sudo chmod 666 /var/run/docker.sock
+docker-compose build   
 sudo docker login 
-# push our built images to dockerhub
 sudo docker-compose push
