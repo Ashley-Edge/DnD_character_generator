@@ -1,5 +1,5 @@
-# Login dnd-manager
-ssh 10.172.0.5 << EOF
+# Login dnd-managerz
+ssh 10.172.0.15 << EOF
 sudo rm -rf DnD_character_generator
 git clone https://github.com/Ashley-Edge/DnD_character_generator.git
 cd qa_project
