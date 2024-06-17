@@ -1,7 +1,7 @@
 ![D&D logo](https://db4sgowjqfwig.cloudfront.net/game_systems/251/assets/357032/DnD5E_Large.png?1407685841)
 # Simple Character Generator
 
-This repository forms my DevOps Core Practical Project Specification individual project. At its core, I will be creating an application that generates a random race, class and weapon to help you start your journey in Dungeons & Dragons. I am required to create a service-orientated architecture for my application, this application must be composed of at least 4 services that work together.
+This repo forms my DevOps Core Practical Project Specification individual project. At its core, I will be creating an application that generates a random race, class and weapon to help you start your journey in Dungeons & Dragons. I am required to create a service-orientated architecture for my application, this application must be composed of at least 4 services that work together.
 
 The requirements set for the project are below:
 
