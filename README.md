@@ -165,9 +165,11 @@ class TestResponse(TestBase):
 
 ## Different Implementations
 
-For services 2, 3 and 4 I am required to create 2 different implementations of my app. I must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting the user experience. For this, I have decided to treat my implementation as an app update, where new character classes and races have been added. To make it really clear to the user I will be altering the HTML with a "Now with more combinations!" notice. :smile: I will also add the past characters feature I mentioned in my [Service1](#Service1) I altered all tests too.
+For services 2, 3 and 4 I am required to create 2 different implementations of my app. I must be able to demonstrate swapping these implementations out for each other seamlessly, without disrupting the user experience. For this, I have decided to treat my implementation as an app update, where new character classes and races have been added. To make it really clear to the user I will be altering the HTML with a `"Now with new races and classes!"` notice. :smile: I will also add the past characters feature I mentioned in my [Service1](#Service1) I altered all tests too.
 
-![new HTML](images/app_version2.png)
+![Plan](images/html_plan_&_result.png)
+Now with new races and classes!
+![Update](images/app_version2.png)
 
 ## Docker
 
